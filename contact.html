@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צור קשר | Carmel Construction & Infrastructure</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>CARMEL</h1>
+                    <span class="logo-subtitle">בנייה ותשתיות</span>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">בית</a>
+                    <a href="about.html" class="nav-link">אודות</a>
+                    <a href="contact.html" class="nav-link contact-btn active">צור קשר</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">צור קשר</h1>
+            <p class="page-subtitle">נשמח לשמוע ממך ולהיות שותפים בפרויקט הבא שלך</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>שלח לנו הודעה</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">שם מלא *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">אימייל *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">טלפון *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project-type">סוג הפרויקט</label>
+                            <select id="project-type" name="project-type">
+                                <option value="">בחר סוג פרויקט</option>
+                                <option value="infrastructure">תשתיות</option>
+                                <option value="commercial">מבנה מסחרי</option>
+                                <option value="residential">בית פרטי</option>
+                                <option value="tower">מגדל מגורים</option>
+                                <option value="other">אחר</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">הודעה *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="cta-button">שלח הודעה</button>
+                    </form>
+
+                    <div id="form-message" class="form-message"></div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">📍</div>
+                        <h3>כתובת</h3>
+                        <p>רחוב התעשייה 15<br>חיפה, ישראל 3000000</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon">📞</div>
+                        <h3>טלפון</h3>
+                        <p>משרד ראשי: 04-1234567<br>נייד: 050-1234567</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3>אימייל</h3>
+                        <p>info@carmel-construction.co.il<br>projects@carmel-construction.co.il</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon">🕐</div>
+                        <h3>שעות פעילות</h3>
+                        <p>ראשון - חמישי: 8:00 - 18:00<br>שישי: 8:00 - 13:00</p>
+                    </div>
+
+                    <div class="map-placeholder">
+                        <div class="placeholder-icon">🗺️</div>
+                        <span class="placeholder-text">מפת מיקום Google Maps</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">שאלות נפוצות</span>
+                <h2 class="section-title">שאלות ותשובות</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>כמה זמן לוקח פרויקט ממוצע?</h3>
+                    <p>משך הפרויקט תלוי בסוג ובהיקף. בית פרטי - 12-18 חודשים, מגדל מגורים - 24-36 חודשים, פרויקט תשתית - 18-48 חודשים.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>האם אתם מספקים אחריות?</h3>
+                    <p>כן, אנו מספקים אחריות מלאה לכל פרויקט. בתים פרטיים - 7 שנים, פרויקטי תשתית - 10 שנים.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>איך מתבצע תהליך התכנון?</h3>
+                    <p>התהליך כולל פגישת ייעוץ, תכנון מקדים, הצעת מחיר מפורטת, תכנון מפורט עם BIM, והתחלת ביצוע.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>האם אתם עובדים עם קבלנות משנה?</h3>
+                    <p>כן, אנו עובדים עם קבלני משנה מוסמכים בלבד, כולם עם ניסיון מוכח וביטוחים תקפים.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CARMEL</h3>
+                    <p>בונים את העתיד יחד</p>
+                </div>
+                <div class="footer-section">
+                    <h4>קישורים</h4>
+                    <a href="index.html">בית</a>
+                    <a href="about.html">אודות</a>
+                    <a href="contact.html">צור קשר</a>
+                </div>
+                <div class="footer-section">
+                    <h4>צור קשר</h4>
+                    <p>טלפון: 04-1234567</p>
+                    <p>info@carmel-construction.co.il</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Carmel Construction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
