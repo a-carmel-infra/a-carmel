@@ -1,0 +1,133 @@
+---
+layout: default
+title: צור קשר | Carmel Construction & Infrastructure
+permalink: /contact/
+---
+
+{% assign contact_page = site.data.pages.contact %}
+{% assign contact_info = site.data.site-info %}
+
+<!-- Contact Hero -->
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title">{{ contact_page.title | default: "צור קשר" }}</h1>
+        <p class="page-subtitle">{{ contact_page.subtitle | default: "נשמח לשמוע ממך ולהיות שותפים בפרויקט הבא שלך" }}</p>
+    </div>
+</section>
+
+<!-- Contact Content -->
+<section class="section contact-section">
+    <div class="container">
+        <div class="contact-wrapper">
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <h2>שלח לנו הודעה</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">שם מלא *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">אימייל *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">טלפון *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-type">סוג הפרויקט</label>
+                        <select id="project-type" name="project-type">
+                            <option value="">בחר סוג פרויקט</option>
+                            <option value="infrastructure">תשתיות</option>
+                            <option value="commercial">מבנה מסחרי</option>
+                            <option value="residential">בית פרטי</option>
+                            <option value="tower">מגדל מגורים</option>
+                            <option value="other">אחר</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">הודעה *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button">שלח הודעה</button>
+                </form>
+
+                <div id="form-message" class="form-message"></div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="contact-info-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>כתובת</h3>
+                    <p>{{ contact_page.address | default: contact_info.address }}</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>טלפון</h3>
+                    <p>משרד ראשי: {{ contact_page.phone_main | default: contact_info.phone }}<br>נייד: {{ contact_page.phone_mobile | default: contact_info.mobile }}</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>אימייל</h3>
+                    <p>{{ contact_page.email_main | default: contact_info.email }}<br>{{ contact_page.email_projects }}</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">🕐</div>
+                    <h3>שעות פעילות</h3>
+                    <p>{{ contact_page.hours | default: "ראשון - חמישי: 8:00 - 18:00<br>שישי: 8:00 - 13:00" }}</p>
+                </div>
+
+                <div class="map-placeholder">
+                    <div class="placeholder-icon">🗺️</div>
+                    <span class="placeholder-text">מפת מיקום Google Maps</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section faq-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">שאלות נפוצות</span>
+            <h2 class="section-title">שאלות ותשובות</h2>
+        </div>
+
+        <div class="faq-grid">
+            {{ contact_page.content | markdownify }}
+
+            {% unless contact_page.content %}
+            <div class="faq-item">
+                <h3>כמה זמן לוקח פרויקט ממוצע?</h3>
+                <p>משך הפרויקט תלוי בסוג ובהיקף. בית פרטי - 12-18 חודשים, מגדל מגורים - 24-36 חודשים, פרויקט תשתית - 18-48 חודשים.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>האם אתם מספקים אחריות?</h3>
+                <p>כן, אנו מספקים אחריות מלאה לכל פרויקט. בתים פרטיים - 7 שנים, פרויקטי תשתית - 10 שנים.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>איך מתבצע תהליך התכנון?</h3>
+                <p>התהליך כולל פגישת ייעוץ, תכנון מקדים, הצעת מחיר מפורטת, תכנון מפורט עם BIM, והתחלת ביצוע.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>האם אתם עובדים עם קבלנות משנה?</h3>
+                <p>כן, אנו עובדים עם קבלני משנה מוסמכים בלבד, כולם עם ניסיון מוכח וביטוחים תקפים.</p>
+            </div>
+            {% endunless %}
+        </div>
+    </div>
+</section>

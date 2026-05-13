@@ -8,7 +8,7 @@ media:
 collections:
   - name: pages
     label: עמודים
-    path: content/pages
+    path: _data/pages
     view:
       fields:
         - title
@@ -58,7 +58,7 @@ collections:
 
   - name: projects
     label: פרויקטים
-    path: content/projects
+    path: _projects
     view:
       fields:
         - title
@@ -103,7 +103,7 @@ collections:
 
   - name: team
     label: חברי צוות
-    path: content/team
+    path: _team
     view:
       fields:
         - name

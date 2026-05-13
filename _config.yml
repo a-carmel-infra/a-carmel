@@ -1,0 +1,42 @@
+# Jekyll Configuration
+title: Carmel Construction & Infrastructure
+description: כרמל בנייה ותשתיות - הנדסה אזרחית ותשתיות ברמה עולמית
+baseurl: ""
+url: "https://a-carmel.co.il"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+  team:
+    output: true
+    permalink: /team/:name
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "team"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - .pages.yml
+  - data/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
