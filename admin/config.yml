@@ -1,0 +1,63 @@
+backend:
+  name: github
+  repo: evyacik/a-carmel
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: "he"
+
+collections:
+  - name: "pages"
+    label: "עמודים"
+    files:
+      - label: "עמוד הבית"
+        name: "home"
+        file: "index.html"
+        fields:
+          - {label: "כותרת ראשית", name: "hero_title", widget: "string", default: "בונים את העתיד"}
+          - {label: "כותרת משנה", name: "hero_subtitle", widget: "string", default: "הנדסה אזרחית ותשתיות ברמה עולמית"}
+          - {label: "תיאור", name: "hero_description", widget: "text"}
+
+      - label: "אודות"
+        name: "about"
+        file: "about/index.html"
+        fields:
+          - {label: "כותרת עמוד", name: "title", widget: "string"}
+          - {label: "כותרת משנה", name: "subtitle", widget: "string"}
+
+      - label: "צור קשר"
+        name: "contact"
+        file: "contact/index.html"
+        fields:
+          - {label: "כותרת עמוד", name: "title", widget: "string"}
+          - {label: "כותרת משנה", name: "subtitle", widget: "string"}
+          - {label: "טלפון", name: "phone", widget: "string"}
+          - {label: "אימייל", name: "email", widget: "string"}
+          - {label: "כתובת", name: "address", widget: "text"}
+
+  - name: "projects"
+    label: "פרויקטים"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "שם פרויקט", name: "title", widget: "string"}
+      - {label: "קטגוריה", name: "category", widget: "select", options: ["תשתיות", "מגדלים", "בתים פרטיים", "תעשייה"]}
+      - {label: "תיאור", name: "description", widget: "text"}
+      - {label: "תמונה", name: "image", widget: "image", required: false}
+      - {label: "תאריך", name: "date", widget: "datetime"}
+      - {label: "סטטוס", name: "status", widget: "select", options: ["בביצוע", "הושלם"], default: "הושלם"}
+
+  - name: "team"
+    label: "צוות"
+    folder: "content/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "שם", name: "name", widget: "string"}
+      - {label: "תפקיד", name: "role", widget: "string"}
+      - {label: "תיאור", name: "description", widget: "text"}
+      - {label: "תמונה", name: "image", widget: "image", required: false}
+      - {label: "סדר תצוגה", name: "order", widget: "number", default: 0}
