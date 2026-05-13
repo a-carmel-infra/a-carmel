@@ -1,13 +1,41 @@
 <!doctype html>
-<html dir="rtl" lang="he">
+<html lang="he">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>ניהול תוכן - Carmel Construction</title>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* RTL support for Hebrew content */
+    body {
+      font-family: 'Heebo', sans-serif;
+    }
+
+    /* Make text inputs support Hebrew properly */
+    [class*="TextField"] input,
+    [class*="TextField"] textarea,
+    [class*="TextArea"] textarea {
+      direction: rtl;
+      text-align: right;
+      font-family: 'Heebo', sans-serif;
+    }
+
+    /* RTL for markdown editor */
+    .nc-mdEditor-editor,
+    .nc-mdEditor-preview {
+      direction: rtl;
+      text-align: right;
+    }
+  </style>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.3.0/dist/decap-cms.js"></script>
+  <script>
+    // Custom configuration for Hebrew support
+    CMS.registerLocale('he', {
+      // Add custom Hebrew translations if needed
+    });
+  </script>
 </body>
 </html>
