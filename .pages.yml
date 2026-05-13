@@ -1,61 +1,121 @@
 media: images/uploads
 
-collections:
-  - name: site_pages
-    label: Site Pages
-    files:
-      - name: home
-        label: Home Page
-        file: _data/pages/home.yml
-        fields:
-          - {name: hero_title, label: Hero Title, widget: string}
-          - {name: hero_subtitle, label: Hero Subtitle, widget: string}
-          - {name: hero_description, label: Description, widget: text}
-          - {name: cta_text, label: Button Text, widget: string}
+content:
+  # Single page files
+  - name: home
+    label: Home Page
+    type: file
+    path: _data/pages/home.yml
+    fields:
+      - name: hero_title
+        label: Hero Title
+        type: string
+      - name: hero_subtitle
+        label: Hero Subtitle
+        type: string
+      - name: hero_description
+        label: Description
+        type: text
+      - name: cta_text
+        label: Button Text
+        type: string
 
-      - name: about
-        label: About Page
-        file: _data/pages/about.yml
-        fields:
-          - {name: title, label: Title, widget: string}
-          - {name: subtitle, label: Subtitle, widget: string}
-          - {name: story_title, label: Story Title, widget: string}
-          - {name: content, label: Content, widget: text}
+  - name: about
+    label: About Page
+    type: file
+    path: _data/pages/about.yml
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: subtitle
+        label: Subtitle
+        type: string
+      - name: story_title
+        label: Story Title
+        type: string
+      - name: content
+        label: Content
+        type: text
 
-      - name: contact
-        label: Contact Page
-        file: _data/pages/contact.yml
-        fields:
-          - {name: title, label: Title, widget: string}
-          - {name: subtitle, label: Subtitle, widget: string}
-          - {name: address, label: Address, widget: text}
-          - {name: phone_main, label: Phone, widget: string}
-          - {name: phone_mobile, label: Mobile, widget: string}
-          - {name: email_main, label: Email, widget: string}
-          - {name: hours, label: Hours, widget: string}
+  - name: contact
+    label: Contact Page
+    type: file
+    path: _data/pages/contact.yml
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: subtitle
+        label: Subtitle
+        type: string
+      - name: address
+        label: Address
+        type: text
+      - name: phone_main
+        label: Phone
+        type: string
+      - name: phone_mobile
+        label: Mobile
+        type: string
+      - name: email_main
+        label: Email
+        type: string
+      - name: hours
+        label: Hours
+        type: string
 
+  # Collections
   - name: projects
     label: Projects
-    folder: _projects
-    create: true
+    type: collection
+    path: _projects
     fields:
-      - {name: title, label: Title, widget: string}
-      - {name: category, label: Category, widget: string}
-      - {name: description, label: Description, widget: text}
-      - {name: image, label: Image, widget: image, required: false}
-      - {name: status, label: Status, widget: string}
-      - {name: date, label: Date, widget: datetime}
-      - {name: location, label: Location, widget: string, required: false}
+      - name: title
+        label: Project Title
+        type: string
+      - name: category
+        label: Category
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: image
+        label: Image
+        type: image
+      - name: status
+        label: Status
+        type: string
+      - name: date
+        label: Date
+        type: date
+      - name: location
+        label: Location
+        type: string
 
   - name: team
-    label: Team
-    folder: _team
-    create: true
+    label: Team Members
+    type: collection
+    path: _team
     fields:
-      - {name: name, label: Name, widget: string}
-      - {name: role, label: Role, widget: string}
-      - {name: description, label: Description, widget: text}
-      - {name: image, label: Photo, widget: image, required: false}
-      - {name: email, label: Email, widget: string, required: false}
-      - {name: phone, label: Phone, widget: string, required: false}
-      - {name: order, label: Order, widget: number, default: 0}
+      - name: name
+        label: Name
+        type: string
+      - name: role
+        label: Role
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: image
+        label: Photo
+        type: image
+      - name: email
+        label: Email
+        type: string
+      - name: phone
+        label: Phone
+        type: string
+      - name: order
+        label: Display Order
+        type: number
