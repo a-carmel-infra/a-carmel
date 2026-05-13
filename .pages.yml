@@ -1,0 +1,97 @@
+title: Carmel Construction CMS
+description: ניהול תוכן לאתר כרמל בנייה ותשתיות
+
+pages:
+  - title: עמוד הבית
+    path: index.html
+    fields:
+      - label: כותרת ראשית
+        name: hero_title
+        type: string
+        default: בונים את העתיד
+      - label: כותרת משנה
+        name: hero_subtitle
+        type: string
+        default: הנדסה אזרחית ותשתיות ברמה עולמית
+      - label: תיאור
+        name: hero_description
+        type: text
+
+  - title: אודות
+    path: about/index.html
+    fields:
+      - label: כותרת עמוד
+        name: page_title
+        type: string
+      - label: כותרת משנה
+        name: page_subtitle
+        type: string
+
+  - title: צור קשר
+    path: contact/index.html
+    fields:
+      - label: כותרת עמוד
+        name: page_title
+        type: string
+      - label: כותרת משנה
+        name: page_subtitle
+        type: string
+      - label: טלפון
+        name: phone
+        type: string
+      - label: אימייל
+        name: email
+        type: string
+
+collections:
+  - title: פרויקטים
+    name: projects
+    path: content/projects
+    fields:
+      - label: שם פרויקט
+        name: title
+        type: string
+      - label: קטגוריה
+        name: category
+        type: select
+        options:
+          - תשתיות
+          - מגדלים
+          - בתים פרטיים
+          - תעשייה
+      - label: תיאור
+        name: description
+        type: text
+      - label: תמונה
+        name: image
+        type: image
+      - label: סטטוס
+        name: status
+        type: select
+        options:
+          - בביצוע
+          - הושלם
+
+  - title: צוות
+    name: team
+    path: content/team
+    fields:
+      - label: שם
+        name: name
+        type: string
+      - label: תפקיד
+        name: role
+        type: string
+      - label: תיאור
+        name: description
+        type: text
+      - label: תמונה
+        name: image
+        type: image
+      - label: סדר תצוגה
+        name: order
+        type: number
+
+media:
+  input: images
+  output: images/uploads
