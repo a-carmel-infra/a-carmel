@@ -1,14 +1,110 @@
-pages:
-  - title: Home
-    path: _data/pages/home.yml
+object:
+  pages:
+    - title: Home Page
+      path: _data/pages/home.yml
+      fields:
+        hero_title:
+          label: Hero Title
+          type: string
+        hero_subtitle:
+          label: Hero Subtitle
+          type: string
+        hero_description:
+          label: Hero Description
+          type: text
+        cta_text:
+          label: Button Text
+          type: string
 
-collections:
-  - title: Projects
-    name: projects
-    path: _projects
+    - title: About Page
+      path: _data/pages/about.yml
+      fields:
+        title:
+          label: Title
+          type: string
+        subtitle:
+          label: Subtitle
+          type: string
+        story_title:
+          label: Story Title
+          type: string
+        content:
+          label: Content
+          type: text
 
-  - title: Team
-    name: team
-    path: _team
+    - title: Contact Page
+      path: _data/pages/contact.yml
+      fields:
+        title:
+          label: Title
+          type: string
+        subtitle:
+          label: Subtitle
+          type: string
+        address:
+          label: Address
+          type: text
+        phone_main:
+          label: Main Phone
+          type: string
+        phone_mobile:
+          label: Mobile
+          type: string
+        email_main:
+          label: Email
+          type: string
+        hours:
+          label: Hours
+          type: string
 
-media: images/uploads
+  collections:
+    - title: Projects
+      name: projects
+      path: _projects
+      fields:
+        title:
+          label: Project Title
+          type: string
+        category:
+          label: Category
+          type: string
+        description:
+          label: Description
+          type: text
+        image:
+          label: Image
+          type: image
+        status:
+          label: Status
+          type: string
+        date:
+          label: Date
+          type: date
+        location:
+          label: Location
+          type: string
+
+    - title: Team
+      name: team
+      path: _team
+      fields:
+        name:
+          label: Name
+          type: string
+        role:
+          label: Role
+          type: string
+        description:
+          label: Description
+          type: text
+        image:
+          label: Photo
+          type: image
+        email:
+          label: Email
+          type: string
+        phone:
+          label: Phone
+          type: string
+
+  media: images/uploads
